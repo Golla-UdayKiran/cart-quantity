@@ -1,5 +1,8 @@
 let cartQuantity = 0;
 
+// Display the cart quantity when the page loads.
+displayCartQuantity();
+
 function updateCartQuantity(change) {
   if (cartQuantity + change > 10) {
     alert('The cart is full');
@@ -12,5 +15,12 @@ function updateCartQuantity(change) {
   }
   
   cartQuantity += change;
-  console.log(`Cart quantity: ${cartQuantity}`);
+
+  // Display the cart quantity after updating.
+  displayCartQuantity();
+}
+
+function displayCartQuantity() {
+  document.querySelector('.js-cart-quantity')
+    .innerHTML = `Cart quantity: ${cartQuantity}`;
 }

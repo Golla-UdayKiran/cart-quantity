@@ -8,7 +8,9 @@
     <p>Cart Quantity</p>
 
     <button onclick="
-      console.log(`Cart quantity: ${cartQuantity}`);
+      // Display the cart quantity on the page
+      // instead of in the console.
+      displayCartQuantity();
     ">Show Quantity</button>
 
     <button onclick="
@@ -48,8 +50,13 @@
     <button onclick="
       cartQuantity = 0;
       console.log('Cart was reset.');
-      console.log(`Cart quantity: ${cartQuantity}`);
+
+      // Display the cart quantity after updating.
+      displayCartQuantity();
     ">Reset Cart</button>
+
+    <!-- Create an element to display the cart quantity. -->
+    <p class="js-cart-quantity"></p>
     
     <script src="script.js"></script>
   </body>
